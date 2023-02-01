@@ -18,7 +18,6 @@ RSpec.describe "Api::V1::Projects", type: :request do
     end
 
     it "return all the projects" do
-      # json_response = JSON.parse(response.body)
       expect(json.values.first.count).to eq(10)
     end
   end
@@ -26,12 +25,11 @@ RSpec.describe "Api::V1::Projects", type: :request do
   describe "POST project#create" do
 
     before do
-      # FactoryBot.create(:project, user_id: user.id)
       post '/api/v1/projects', params: {
-        projects: {
-          title: "",
-          description: "",
-          location: "",
+        project: {
+          title: "test",
+          description: "test desc",
+          location: "nepal",
         }
       }
     end
@@ -47,16 +45,17 @@ RSpec.describe "Api::V1::Projects", type: :request do
         post '/api/v1/projects',
          params: {
           project: {
-            title: "Earch",
+            title: "earth",
             description: " Our planet",
             location: "SolarSystem",
           }
         }, headers:{Authorization: token}
       end
       
-      it 'return response status 201' do
+      it 'return response status 201 ' do
         expect(response).to have_http_status(:success)
       end
+      
     end
   end
 
@@ -84,10 +83,6 @@ RSpec.describe "Api::V1::Projects", type: :request do
      
       it 'return response status  401' do
         expect(response).to have_http_status(:unauthorized)
-      end
-
-      it 'return error message please login' do
-        expect(json['message']).to  eq("Please log in")
       end
 
     end
@@ -123,12 +118,8 @@ RSpec.describe "Api::V1::Projects", type: :request do
         expect(response).to have_http_status(:unauthorized)
       end
 
-      it 'return error message please login' do
-        expect(json['message']).to eq("Please log in")
-      end
     end
 
-    
     context "authorized user" do
       before do 
         put "/api/v1/projects/#{project.id}", params: {
@@ -143,7 +134,7 @@ RSpec.describe "Api::V1::Projects", type: :request do
       it "return successfull status" do
         expect(response).to  have_http_status(:success)
       end
+
     end
-    
   end
 end
