@@ -7,6 +7,7 @@
 
 ### System dependencies
 
+
 ### Additional gems used
 
 [gem 'faker'](https://github.com/faker-ruby/faker)
@@ -43,7 +44,7 @@ git clone https://github.com/mukeshmahara/AW-test-api.git
 EDITOR="code --wait" /bin/rails credentials:edit
 
 ```
-3. Create `.env` file in root directory.Paste the code below
+3. Create `.env` file in root directory and `Paste` the code below
 
 ```sh
 
@@ -51,7 +52,7 @@ RAILS_ENV=production
 
 POSTGRES_HOST=db
 
-POSTGRES_DB=<angelswing>db_production
+POSTGRES_DB=angelswingdb_production
 
 POSTGRES_USER= any username
 
@@ -69,7 +70,9 @@ RAILS_MASTER_KEY= <paste master key from master file>
 sudo docker compose build && docker compose up
 
 ```
-### If your postgres database in your local machine is running port 5432 you might encounter the error in that case stop your local postgres
+> **NOTE** 
+
+If your postgres database in your local machine is running port 5432 you might encounter the error in that case stop your local postgres
 
 ```sh 
 
