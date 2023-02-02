@@ -13,12 +13,13 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-`rails db:create`
-`rails db:migrate`
-`rails db:seed`
+create's database: `rails db:create`
+create's table: `rails db:migrate`
+
 
 
 * Database initialization
+`rails db:seed`
 
 * How to run the test suite
 `rails s`
@@ -27,4 +28,14 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+*  `sudo docker compose build && docker compose up`
+*  `systemctl stop postgresql` 
+*  `systemctl start postgresql` 
+
+*Configuration
+RAILS_ENV=<environment name>
+POSTGRES_HOST=<pg host name>
+POSTGRES_DB=<your databse name password>
+POSTGRES_USER=<your db user>
+POSTGRES_PASSWORD=<your db user password>
+RAILS_MASTER_KEY=<your master key >
