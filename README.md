@@ -14,6 +14,7 @@
 [gem 'factory_bot_rails'](https://github.com/thoughtbot/factory_bot_rails)
 [gem 'fast_jsonapi'](https://github.com/jsonapi-serializer/jsonapi-serializer)
 [gem 'rspec-rails'](https://github.com/rspec/rspec-rails)
+[gem "shoulda-matchers"](https://github.com/thoughtbot/shoulda-matchers)
 
 ## Configuration
 
