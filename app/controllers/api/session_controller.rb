@@ -6,7 +6,7 @@ class Api::SessionController < ApplicationController
     @user = User.find_by(email: params[:auth][:email])
     if @user && @user.authenticate(params[:auth][:password])
       token = encode_token({user_id: @user.id})
-      render json: {token: token, email: @user.email, name: @user.full_name}, status: 200
+      render json: UserSerializer.new(@user, {params: {token: token, name: @user.full_name} }), status: 200
     else
       render json: {error: "Invalid email or password"}
     end
