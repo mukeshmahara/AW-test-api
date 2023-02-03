@@ -7,15 +7,37 @@
 
 ### Additional gems used
 
-Faker [Read more](https://github.com/faker-ruby/faker)
+#### Faker 
 
-factory_bot_rails [Read more](https://github.com/thoughtbot/factory_bot_rails)
+Used to generate fake records.
 
-Fast_jsonapi [Read more](https://github.com/jsonapi-serializer/jsonapi-serializer)
+[Read more](https://github.com/faker-ruby/faker)
 
-rspec-rails [Read more](https://github.com/rspec/rspec-rails)
+#### factory_bot_rails
 
-shoulda-matchers [Read more](https://github.com/thoughtbot/shoulda-matchers)
+Used to create test data while writing test spec for model and controller.
+[read more](https://github.com/thoughtbot/factory_bot_rails)
+
+#### Fast_jsonapi
+
+Used to searilize data in standard format. [read more](https://github.com/jsonapi-serializer/jsonapi-serializer)
+
+#### rspec-rails 
+
+Used to generate model spec and request spec and spec tests. [read more](https://github.com/rspec/rspec-rails)
+
+
+#### shoulda-matchers
+
+Used to model validation and assciation. [read more](https://github.com/thoughtbot/shoulda-matchers)
+
+#### jwt
+
+Used for token based authentication. [read more](https://github.com/jwt/ruby-jwt)
+
+#### bcrypt
+
+Used to encrypt the `passwords` in the database and also provides method to authenticate.[read more](https://github.com/bcrypt-ruby/bcrypt-ruby)
 
 ### System dependencies
 
