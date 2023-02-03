@@ -5,18 +5,19 @@
 * Get [API COLLECTION](https://elements.getpostman.com/redirect?entityId=9462682-eea4feb6-7937-4b89-a8e7-9c409b4026ac&entityType=collection)
 
 
-### System dependencies
-
-
 ### Additional gems used
 
-[gem 'faker'](https://github.com/faker-ruby/faker)
-[gem 'factory_bot_rails'](https://github.com/thoughtbot/factory_bot_rails)
-[gem 'fast_jsonapi'](https://github.com/jsonapi-serializer/jsonapi-serializer)
-[gem 'rspec-rails'](https://github.com/rspec/rspec-rails)
-[gem "shoulda-matchers"](https://github.com/thoughtbot/shoulda-matchers)
+Faker [Read more](https://github.com/faker-ruby/faker)
 
-## Configuration
+factory_bot_rails [Read more](https://github.com/thoughtbot/factory_bot_rails)
+
+Fast_jsonapi [Read more](https://github.com/jsonapi-serializer/jsonapi-serializer)
+
+rspec-rails [Read more](https://github.com/rspec/rspec-rails)
+
+shoulda-matchers [Read more](https://github.com/thoughtbot/shoulda-matchers)
+
+### System dependencies
 
 #### Prerequisites
 
