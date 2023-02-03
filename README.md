@@ -9,9 +9,7 @@
 
 #### Faker 
 
-Used to generate fake records.
-
-[Read more](https://github.com/faker-ruby/faker)
+Used to generate fake records.[Read more](https://github.com/faker-ruby/faker)
 
 #### factory_bot_rails
 
@@ -38,6 +36,41 @@ Used for token based authentication. [read more](https://github.com/jwt/ruby-jwt
 #### bcrypt
 
 Used to encrypt the `passwords` in the database and also provides method to authenticate.[read more](https://github.com/bcrypt-ruby/bcrypt-ruby)
+
+### Some modification in project model
+
+Since, the project  attribute name `type` was not achieved since it was the reserved keyword. So, `type` attribubte was change to `project_type`.
+
+### Some modification in postman  user signup POST request
+
+In the api specification form date are sent like this
+
+```sh
+
+{
+  "firstName": "example_fname",
+  "lastName": "example_lname", 
+  "email": "example@gmail.com",
+  "password": "example_password",
+  "country": "example_country"
+}
+
+```
+but instead of sending data like above I prefered sending data like this and using strong params to filter out the data as per need.
+
+``` sh 
+
+{
+    "user":{
+      "firstName": "example_fname",
+      "lastName": "example_lname", 
+      "email": "example@gmail.com",
+      "password": "example_password",
+      "country": "example_country"
+    }
+}
+
+```
 
 ### System dependencies
 
