@@ -2,7 +2,7 @@
 
 ## Link to the api collection 
 
-* Get [API COLLECTION](https://api.postman.com/collections/9462682-eea4feb6-7937-4b89-a8e7-9c409b4026ac?access_key=PMAT-01GR8C1JPRAS18T0W7CE4JY0G3)
+* Get [API COLLECTION](https://elements.getpostman.com/redirect?entityId=9462682-eea4feb6-7937-4b89-a8e7-9c409b4026ac&entityType=collection)
 
 
 ### System dependencies
