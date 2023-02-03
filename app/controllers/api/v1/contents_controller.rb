@@ -1,6 +1,6 @@
 class Api::V1::ContentsController < ApplicationController
   before_action :authorize, only: %i[create destroy update]
-  before_action :set_content, only: %i[:update destroy]
+  before_action :set_content, only: %i[show update destroy]
 
   def index
     @project = Project.find(params[:project_id])
@@ -36,11 +36,18 @@ class Api::V1::ContentsController < ApplicationController
 
   def show
     @project = Project.find(params[:project_id]) if params[:project_id]
-    if @project.user.id.eql? logged_in_user&.id
+
+    if(@project.contents.ids.include? params[:id].to_i)
+      
       @content = @project.contents.find_by(id: params[:id])
-      render json: ContentSerializer.new(@content), status: 200
+      if  logged_in_user
+        render json: ContentSerializer.new(@content), status: 200
+      else
+        render json: {error:"permission denied."}, status: :unauthorized
+      end
     else
-      render json: {error:"permission denied."}, status: :unauthorized
+      render json: {error:"reqeuest content not found."}, status: 200
+
     end
   end
 
