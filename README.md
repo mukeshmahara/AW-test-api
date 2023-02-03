@@ -72,12 +72,11 @@ sudo docker compose build && docker compose up
 
 ```
 > **NOTE** 
-
-If your postgres database in your local machine is running port 5432 you might encounter the error in that case stop your local postgres
+>If your postgres database in your local machine is running at port 5432 you might encounter the error in that case stop your local postgres
 
 ```sh 
 
-  `systemctl stop postgresql` 
+  systemctl stop postgresql
   
 ```
 
