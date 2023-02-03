@@ -25,7 +25,7 @@
   * Git
   * Ruby 2.7.2
   * Rails 7.0.4.2
-  * Docker latest version
+  * Docker latest version [install](https://docs.docker.com/engine/install/ubuntu/)
 
 
 ## Project Setup in your machine
