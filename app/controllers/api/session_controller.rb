@@ -8,7 +8,7 @@ class Api::SessionController < ApplicationController
       token = encode_token({user_id: @user.id})
       render json: UserSerializer.new(@user, {params: {token: token, name: @user.full_name} }), status: 200
     else
-      render json: {error: "Invalid email or password"}
+      render json: {error: "Invalid email or password"}, status: 403
     end
   end
 
