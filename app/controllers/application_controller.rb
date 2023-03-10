@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
   include Pundit::Authorization
-  before_action :authorize
+  before_action :authenticate
   rescue_from ActiveRecord::RecordNotFound, with: :handle_error
 
 

@@ -1,5 +1,5 @@
 class Api::SessionController < ApplicationController
-  before_action :authorize, only: [:auto_login]
+  before_action :authenticate, only: [:auto_login]
 
    # LOGGING IN
    def login
