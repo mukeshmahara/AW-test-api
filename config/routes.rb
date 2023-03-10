@@ -8,9 +8,9 @@ Rails.application.routes.draw do
     post 'v1/auth/signin', to: 'session#login'
     namespace :v1 do
       post 'users/signup', to: 'users#create'
-      get 'projects/my_projects', to: 'projects#my_projects'
-      resources :projects
+     
       resources :projects do
+        get 'my_projects', to: 'projects#my_projects', on: :collection     
         resources :contents, only: [:index, :create, :show]
       end
 
