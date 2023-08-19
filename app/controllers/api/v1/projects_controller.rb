@@ -4,6 +4,7 @@ class Api::V1::ProjectsController < ApplicationController
 
   def index
     @project = Project.order("created_at desc").all
+    @project = Project.where("description ILIKE ?", "%#{params[:description]}%") if params[:description].present?
     render json: ProjectsSerializer.new(@project), status: 200
   end
 
