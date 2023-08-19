@@ -20,6 +20,8 @@ gem 'fast_jsonapi'
 gem 'rspec-rails'
 gem 'faker'
 
+gem "pundit", "~> 2.3"
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

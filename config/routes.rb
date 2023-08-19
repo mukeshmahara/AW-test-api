@@ -5,12 +5,15 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   namespace :api, constraints: { format: :json } do
-    post 'v1/auth/signin', to: 'session#login'
+    
+    scope :v1 do
+      post 'auth/signin', to: 'session#login'
+    end
+
     namespace :v1 do
       post 'users/signup', to: 'users#create'
-      get 'projects/my_projects', to: 'projects#my_projects'
-      resources :projects
       resources :projects do
+        get 'my_projects', to: 'projects#my_projects', on: :collection     
         resources :contents, only: [:index, :create, :show]
       end
 

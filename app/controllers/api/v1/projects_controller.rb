@@ -1,5 +1,5 @@
 class Api::V1::ProjectsController < ApplicationController
-  before_action :authorize, except: %i[index show]
+  before_action :authenticate, except: %i[index show]
   before_action :set_project, only: %i[show update destroy]
 
   def index
