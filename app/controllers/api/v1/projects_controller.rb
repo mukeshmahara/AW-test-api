@@ -1,4 +1,4 @@
-class Api::V1::ProjectsController < ApplicationController
+class Api::V1::ProjectsController < Api::ApiController
   before_action :authenticate, except: %i[index show]
   before_action :set_project, only: %i[show update destroy]
 

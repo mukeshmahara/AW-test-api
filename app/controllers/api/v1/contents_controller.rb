@@ -1,4 +1,4 @@
-class Api::V1::ContentsController < ApplicationController
+class Api::V1::ContentsController < Api::ApiController
   before_action :authenticate, only: %i[create destroy update]
   before_action :set_content, only: %i[show update destroy]
 

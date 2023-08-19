@@ -1,7 +1,6 @@
-class Api::V1::UsersController < ApplicationController
+class Api::V1::UsersController < Api::ApiController
   before_action :authenticate, except: %i[create]
-  # before_action :authenticate, only: [:auto_login]
-
+  before_action :authenticate, only: [:auto_login]
   
   # REGISTER
   def create
